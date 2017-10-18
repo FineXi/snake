@@ -10,14 +10,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            char sym1 = '*';
+            Point p1 = new Point();
+            p1.sym = '#';
             for (int x1 = 1; x1 <= 20; x1++)
             {
                 for (int y1 = 1; y1 <= 20; y1++)
                 {
                     if (x1 == y1)
                     {
-                        Draw(x1, y1, sym1);
+                        p1.x = x1;
+                        p1.y = y1;
+                        p1.Draw();
                     }
                 }
             }
@@ -26,10 +29,5 @@ namespace ConsoleApp1
             
         }
 
-        static void Draw(int x, int y, char sym)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
-        }
     }
 }
