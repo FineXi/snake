@@ -11,7 +11,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Point p1 = new Point();
-            p1.sym = '#';
+            char sym1 = '*';
             for (int x1 = 1; x1 <= 20; x1++)
             {
                 for (int y1 = 1; y1 <= 20; y1++)
@@ -20,6 +20,7 @@ namespace ConsoleApp1
                     {
                         p1.x = x1;
                         p1.y = y1;
+                        p1.sym = sym1;
                         p1.Draw();
                     }
                 }
