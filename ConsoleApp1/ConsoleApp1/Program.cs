@@ -10,22 +10,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
-            char sym1 = '*';
-            for (int x1 = 1; x1 <= 20; x1++)
-            {
-                for (int y1 = 1; y1 <= 20; y1++)
-                {
-                    if (x1 == y1)
-                    {
-                        p1.x = x1;
-                        p1.y = y1;
-                        p1.sym = sym1;
-                        p1.Draw();
-                    }
-                }
-            }
-
+            Console.SetBufferSize(80, 25);
+            HLine border_top = new HLine(0, 78, 0, '*');
+            border_top.Draw();
+            HLine border_bottom = new HLine(0, 78, 24, '*');
+            border_bottom.Draw();
+            VLine border_left = new VLine(0, 0, 24, '*');
+            border_left.Draw();
+            VLine border_right = new VLine(78, 0, 24, '*');
+            border_right.Draw();
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
             Console.ReadLine();
             
         }
